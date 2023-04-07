@@ -4,6 +4,7 @@ import ch.qiminfo.skills.domain.Skill;
 import ch.qiminfo.skills.dto.SkillDto;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
+import org.mapstruct.MappingTarget;
 import org.mapstruct.NullValuePropertyMappingStrategy;
 
 @Mapper(
@@ -18,4 +19,8 @@ public interface SkillMapper {
     // --- DTO to Skill
     @Mapping(target = "id", ignore = true)
     Skill toEntity(SkillDto skillDto);
+
+    // -- MERGE
+    @Mapping(target = "id", ignore = true)
+    void merge(@MappingTarget Skill target, Skill source);
 }
