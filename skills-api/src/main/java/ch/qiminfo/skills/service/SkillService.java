@@ -4,6 +4,7 @@ import ch.qiminfo.skills.domain.Skill;
 import ch.qiminfo.skills.dto.SkillDto;
 import ch.qiminfo.skills.mapper.SkillMapper;
 import ch.qiminfo.skills.repository.SkillRepository;
+import org.jboss.logging.Logger;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
@@ -13,7 +14,7 @@ import java.util.stream.Collectors;
 
 @ApplicationScoped
 public class SkillService {
-
+    private Logger LOGGER = Logger.getLogger(SkillService.class);
     @Inject
     SkillRepository repository;
     @Inject
