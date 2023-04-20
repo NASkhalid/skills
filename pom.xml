@@ -9,6 +9,7 @@
     <modules>
         <module>skills-api</module>
       <module>skills-jwt</module>
+      <module>skills-api-graphql</module>
     </modules>
   <properties>
     <compiler-plugin.version>3.10.1</compiler-plugin.version>
