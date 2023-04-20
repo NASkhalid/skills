@@ -1,0 +1,25 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-skill-table
+      author: me
+      changes:
+        - createTable:
+            tableName: skill
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: version
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
